@@ -1,0 +1,27 @@
+###
+# 
+GET http://localhost:5000/api/v1/tasks
+
+###
+#
+POST http://localhost:5000/api/v1/tasks
+Content-Type: application/json
+
+{
+    "name": "do some stuff",
+    "completed": true
+}
+
+###
+#
+PUT http://localhost:5000/api/v1/tasks/0815
+Content-Type: application/json
+
+{
+    "name": "do some stuff",
+    "completed": true
+}
+
+###
+#
+DELETE  http://localhost:5000/api/v1/tasks/0815
