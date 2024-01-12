@@ -8,24 +8,32 @@ POST {{url}}/tasks
 Content-Type: application/json
 
 {
-    "name": "do some stuff",
-    "completed": true
+    "name": "another task",
+    "completed": false
 }
 
 ###
 #
-GET {{url}}/tasks/0815
-
-###
-#
-PUT {{url}}/tasks/0815
+POST {{url}}/tasks
 Content-Type: application/json
 
 {
-    "name": "do some stuff",
-    "completed": true
+    "name": "fgfsgsfgfhfhsfghgfhfghfghfffshzfsjzjzj"
 }
 
 ###
 #
-DELETE  {{url}}/tasks/0815
+GET {{url}}/tasks/659fbffd0bc27a5d84c20061
+
+###
+#
+DELETE  {{url}}/tasks/659ff4cc3f4c40c2600ba66c
+
+###
+#
+PATCH {{url}}/tasks/659ff46916ce9a8090a66db2
+Content-Type: application/json
+
+{
+    "name": "Hello Task"
+}
