@@ -3,6 +3,10 @@
 GET {{url}}/tasks
 
 ###
+# 
+GET {{url}}/not/exist
+
+###
 #
 POST {{url}}/tasks
 Content-Type: application/json
