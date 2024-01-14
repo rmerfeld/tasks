@@ -8,15 +8,16 @@ const notFound = require('./middleware/not-found');
 const port = process.env.PORT || 5000;
 
 // middleware
+app.use(express.static('./src/public'));
 app.use(express.json());
-
 
 // routes
 app.use('/api/v1/tasks', tasks);
 app.use(notFound);
 
 
-const start = async () => {
+// main
+const main = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
         app.listen(port, () =>
@@ -27,5 +28,5 @@ const start = async () => {
     }
 };
 
-start();
+main();
 
