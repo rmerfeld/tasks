@@ -4,6 +4,7 @@ require('dotenv').config();
 const tasks = require('./route/tasks')
 const mongoose = require('mongoose');
 const notFound = require('./middleware/not-found');
+const errorHandler = require('./middleware/errorHandler');
 
 const port = process.env.PORT || 5000;
 
@@ -11,9 +12,11 @@ const port = process.env.PORT || 5000;
 app.use(express.static('./src/public'));
 app.use(express.json());
 
+
 // routes
 app.use('/api/v1/tasks', tasks);
 app.use(notFound);
+app.use(errorHandler);
 
 
 // main
